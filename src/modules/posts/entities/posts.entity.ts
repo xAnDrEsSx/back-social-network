@@ -15,6 +15,9 @@ export class PostEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column({ name: 'user_id' })
+  userId: string;
+
   @ManyToOne(() => UserEntity, (user) => user.posts, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'user_id' })
   user: UserEntity;

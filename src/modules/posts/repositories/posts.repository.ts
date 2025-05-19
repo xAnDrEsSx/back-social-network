@@ -82,6 +82,9 @@ export class PostsRepository implements IPostsRepository {
   async getAllPosts(): Promise<IPost[]> {
     return this.postRepository.find({
       relations: ['user', 'likes'],
+      order: {
+        publishedAt: 'DESC',
+      },
     });
   }
 

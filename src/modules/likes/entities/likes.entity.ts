@@ -4,7 +4,8 @@ import {
   CreateDateColumn,
   ManyToOne,
   JoinColumn,
-  Unique
+  Unique,
+  Column
 } from 'typeorm';
 import { UserEntity } from '../../users/entities/user.entity';
 import { PostEntity } from '../../posts/entities/posts.entity';
@@ -19,6 +20,9 @@ export class LikeEntity {
   @ManyToOne(() => UserEntity, (user) => user.likes, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'user_id' })
   user: UserEntity;
+
+  @Column({ name: 'user_id' })
+  userId: string;
 
   @ManyToOne(() => PostEntity, (post) => post.likes, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'post_id' })

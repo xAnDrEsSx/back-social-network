@@ -1,0 +1,44 @@
+# Ignorar node_modules para evitar subir dependencias innecesarias
+node_modules/
+
+# Ignorar los archivos generados por TypeScript (compilados en dist/)
+dist/
+build/
+
+# Ignorar logs de ejecución
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos de procesos temporales
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Ignorar cobertura de tests (se genera en tiempo de ejecución)
+coverage/
+
+# Ignorar caché de npm y otros
+.npm/
+.eslintcache
+*.tsbuildinfo
+
+# Ignorar configuraciones locales de editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar salidas de Jest que no se necesitan subir
+jest-html-reporters-*
+coverage-final.json
+
+# NOTA: para esta prueba sí quiero subir los archivos .env
+# Por eso no los excluyo
